@@ -2,7 +2,6 @@
 
 use App\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -17,11 +16,13 @@ class UsersTableSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         // Making the same password
-        $password = Hash::make('123456');
+        $password = '123456';
         User::create([
             'name' => 'Administrator',
             'email' => 'admin@test.com',
             'password' => $password,
+            'latitude' => 17.2,
+            'longitude' => 24.1,
         ]);
 
         for ($i = 0; $i <= 10; $i++) {
@@ -29,6 +30,8 @@ class UsersTableSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password' => $password,
+                'latitude' => $faker->latitude,
+                'longitude' => $faker->longitude,
             ]);
         }
     }
