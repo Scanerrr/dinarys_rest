@@ -6,6 +6,12 @@ Test task of API implementation
 
  
   `composer install`
+  
+  `composer run post-root-package-install`
+  
+  `composer run post-create-project-cmd`
+  
+  `composer run post-autoload-dump`
 
   `npm install`
 
@@ -17,8 +23,5 @@ Test task of API implementation
 
  ### Getting started
   `php artisan serve`
-
- ### Running tests
- `composer test`
- 
- There will be error in migration while testing. That's happening because of
+  
+  Password for first users will be '123456'
